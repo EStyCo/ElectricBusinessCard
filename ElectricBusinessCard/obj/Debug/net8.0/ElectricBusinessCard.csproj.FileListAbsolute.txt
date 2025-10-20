@@ -336,3 +336,4 @@ C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\refint\Elec
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\ElectricBusinessCard.pdb
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\ElectricBusinessCard.genruntimeconfig.cache
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\ref\ElectricBusinessCard.dll
+C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

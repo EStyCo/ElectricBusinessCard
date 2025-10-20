@@ -49,7 +49,7 @@ namespace ElectricBusinessCard.Pages.Works
             }
             catch
             {
-                StatusMessage = "Ошибка при создании услуги. Попробуйте позже.";
+                StatusMessage = "Ошибка  при создании услуги. Попробуйте позже.";
                 IsSuccess = false;
                 ShowMessage = true;
                 return Page();
