@@ -51,6 +51,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     }
 });
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -71,5 +73,19 @@ app.UseCors("AllowElectroservice");
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    try
+    {
+        dbContext.Database.Migrate();
+        Console.WriteLine("✅ Миграции применены к БД");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"❌ Ошибка применения миграций: {ex.Message}");
+    }
+}
 
 app.Run();
