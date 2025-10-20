@@ -330,7 +330,6 @@ C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\staticwebas
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\staticwebassets.development.json
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\Electric.25EB9C3D.Up2Date
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\ElectricBusinessCard.dll
 C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\obj\Debug\net8.0\refint\ElectricBusinessCard.dll

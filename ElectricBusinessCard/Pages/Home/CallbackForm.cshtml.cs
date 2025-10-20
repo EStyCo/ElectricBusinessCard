@@ -1,4 +1,4 @@
-using ElectricBusinessCard.Models;
+п»їusing ElectricBusinessCard.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -23,16 +23,16 @@ namespace ElectricBusinessCard.Pages.Home
 
             var botToken = _configuration["Telegram:BotToken"];
             var chatId = _configuration["Telegram:ChatId"];
-            var clientMessage = "\n<i>Нет сообщения!</i>";
+            var clientMessage = "\n<i>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!</i>";
 
             if(!string.IsNullOrEmpty(MessageModel.Message))
             {
-                clientMessage = "\n<i>Сообщение: </i><code>" + MessageModel.Message + @"</code>";
+                clientMessage = "\n<i>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </i><code>" + MessageModel.Message + @"</code>";
             }    
 
-            var message = @"<b>Новая заявка!</b>" +
-                "\n\n<i>Имя: </i> <code>" + MessageModel.Name + @"</code>" +
-                "\n<i>Телефон:</i> <code>" + " +7" + Uri.EscapeDataString(MessageModel.Phone) + @"</code>" + 
+            var message = @"<b>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!</b>" +
+                "\n\n<i>пїЅпїЅпїЅ: </i> <code>" + MessageModel.Name + @"</code>" +
+                "\n<i>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</i> <code>" + " +7" + Uri.EscapeDataString(MessageModel.Phone) + @"</code>" + 
                 clientMessage;
 
             try
@@ -45,21 +45,21 @@ namespace ElectricBusinessCard.Pages.Home
 
                 if (response.IsSuccessStatusCode)
                 {
-                    StatusMessage = "Ваша заявка успешно отправлена! С Вами свяжутся в ближайшее время.";
+                    StatusMessage = "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.";
                     IsSuccess = true;
                     ShowMessage = true;
                     ModelState.Clear();
                     return Page();
                 }
 
-                StatusMessage = "Ошибка при отправке. Пожалуйста, попробуйте позже.";
+                StatusMessage = "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.";
                 IsSuccess = false;
                 ShowMessage = true;
                 return Page();
             }
             catch
             {
-                StatusMessage = "Произошла ошибка. Пожалуйста, попробуйте позже.";
+                StatusMessage = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.";
                 IsSuccess = false;
                 ShowMessage = true;
                 return Page();

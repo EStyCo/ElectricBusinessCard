@@ -1,4 +1,4 @@
-using ElectricBusinessCard.Models;
+п»їusing ElectricBusinessCard.Models;
 using ElectricBusinessCard.Repository;
 using ElectricBusinessCard.Services;
 using ElectricBusinessCard.Services.EntityFramework.Models;
@@ -40,7 +40,7 @@ namespace ElectricBusinessCard.Pages.Works
             try
             {
                 await _workService.CreateElectroWorkAsync(WorkModel, SelectedCategoryId);
-                StatusMessage = "Услуга успешно создана!";
+                StatusMessage = "РЈСЃР»СѓРіР° СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅР°!";
                 IsSuccess = true;
                 ShowMessage = true;
                 ModelState.Clear();
@@ -49,7 +49,7 @@ namespace ElectricBusinessCard.Pages.Works
             }
             catch
             {
-                StatusMessage = "Произошла ошибка. Повторите позже или свяжитесь с разработчиком.";
+                StatusMessage = "РћС€РёР±РєР° РїСЂРё СЃРѕР·РґР°РЅРёРё СѓСЃР»СѓРіРё. РџРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕР·Р¶Рµ.";
                 IsSuccess = false;
                 ShowMessage = true;
                 return Page();
