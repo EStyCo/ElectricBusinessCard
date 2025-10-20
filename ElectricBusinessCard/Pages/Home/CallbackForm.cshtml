@@ -1,0 +1,57 @@
+﻿@page "/callback"
+@model ElectricBusinessCard.Pages.Home.FeedbackFormModel
+@{
+    ViewData["Title"] = "Создать заявку";
+}
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3>Составить заявку </h3>
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="MessageModel.Name" class="form-label">Ваше имя</label>
+                    <input asp-for="MessageModel.Name" class="form-control">
+                    <span asp-validation-for="MessageModel.Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MessageModel.Phone" class="form-label">Телефон</label>
+                    <div class="input-group">
+                        <span class="input-group-text">+7</span>
+                        <input asp-for="MessageModel.Phone"
+                               class="form-control"
+                               placeholder="(XXX) XXX-XX-XX"
+                               type="tel"
+                               pattern="\+7\s?[\(]{0,1}\d{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                               title="Формат: +7(XXX)XXX-XX-XX">
+                    </div>
+                    <span asp-validation-for="MessageModel.Phone" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MessageModel.Message" class="form-label">Сообщение(Необязательно)</label>
+                    <textarea asp-for="MessageModel.Message"
+                              class="form-control"
+                              rows="3"
+                              placeholder="Расскажите нам, чем мы можем Вам помочь"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane me-2"></i>Отправить заявку
+                    </button>
+                </div>
+            </form>
+
+            @if (Model.ShowMessage)
+            {
+                <div class="alert @(Model.IsSuccess ? "alert-success" : "alert-danger") mt-3">
+                    @Model.StatusMessage
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

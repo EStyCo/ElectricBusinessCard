@@ -1,0 +1,75 @@
+﻿@page "/editework"
+@using ElectricBusinessCard.Models.Enums
+@using ElectricBusinessCard.Services.EntityFramework.Models
+@model ElectricBusinessCard.Pages.Works.EditWorkFormModel
+@{
+    ViewData["Title"] = "Изменить услугу";
+}
+
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3>Изменить услугу </h3>
+            <form method="post">
+                <input type="hidden" asp-for="WorkModel.WorkIndex" />
+                <input type="hidden" asp-for="WorkModel.Category" />
+                <div class="mb-3">
+                    <label asp-for="WorkModel.Name" class="form-label">Название услуги</label>
+                    <textarea asp-for="WorkModel.Name"
+                              class="form-control"
+                              rows="3"
+                              style="resize: none;">
+                    </textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="WorkModel.Unit" class="form-label"></label>
+                    <select asp-for="WorkModel.Unit"
+                            asp-items="Html.GetEnumSelectList<UnitWorks>()"
+                            class="form-select">
+                    </select>
+                    <span asp-validation-for="WorkModel.Unit" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="WorkModel.PriceInRubles" class="form-label">Стоимость в Рублях</label>
+                    <input asp-for="WorkModel.PriceInRubles" class="form-control">
+                    <span asp-validation-for="WorkModel.PriceInRubles" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Категория</label>
+                    <input type="text" class="form-control"
+                           value="@Model.WorkModel.Category.Name"
+                           disabled />
+                    <input type="hidden" asp-for="WorkModel.Category.CategoryIndex" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="WorkModel.Description" class="form-label">Описание(Необязательно)</label>
+                    <textarea asp-for="WorkModel.Description"
+                              class="form-control"
+                              rows="3"
+                              style="resize: none;">
+                    </textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">
+                        Изменить услугу
+                    </button>
+                </div>
+            </form>
+
+            @* @if (Model.ShowMessage)
+            {
+                <div class="alert @(Model.IsSuccess ? "alert-success" : "alert-danger") mt-3">
+                    @Model.StatusMessage
+                </div>
+            } *@
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

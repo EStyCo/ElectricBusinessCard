@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ElectricBusinessCard
+build_property.RootNamespace = ElectricBusinessCard
+build_property.ProjectDir = C:\GitHub\ElectricBusinessCard\ElectricBusinessCard\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\GitHub\ElectricBusinessCard\ElectricBusinessCard
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Contacts/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNcQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Home/CallbackForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxDYWxsYmFja0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Price/Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpY2VcUHJpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Shared/Components/_WorksHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcX1dvcmtzSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Shared/Components/_WorksTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcX1dvcmtzVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Works/CreateWorkForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29ya3NcQ3JlYXRlV29ya0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Works/EditWorkForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29ya3NcRWRpdFdvcmtGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Works/Works.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29ya3NcV29ya3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHub/ElectricBusinessCard/ElectricBusinessCard/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9bk0x03zbh

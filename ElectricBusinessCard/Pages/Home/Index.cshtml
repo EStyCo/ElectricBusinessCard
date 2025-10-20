@@ -1,0 +1,206 @@
+﻿@page "/"
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<section>
+    <!-- Баннер с изображением и текстом -->
+    <div class="container my-2">
+        <img src="~/images/logo2.jpg" alt="Электромонтажные работы" class="img-fluid w-100 rounded-3 d-block"
+             style="max-height: 600px; object-fit: cover;">
+    </div>
+
+    <!-- УСЛУГИ -->
+    <div class="container mt-4">
+        @* <h2 class="text-center mb-5">Предоставляемые услуги в Иркутске</h2> *@
+        <h2 class="text-center mb-5 elegant-title">
+            Предоставляемые услуги в Иркутске
+        </h2>
+        <div class="row align-items-center">
+            <!-- Левая колонка (услуги) -->
+            <div class="col-md-6">
+                <ul class="services-list">
+                    <li><i class="fas fa-bolt mr-2"></i> Монтаж/замена розеток и выключателей</li>
+                    <li><i class="fas fa-sliders-h mr-2"></i> Монтаж и расключение электрощитов</li>
+                    <li><i class="fas fa-plug mr-2"></i> Монтаж/замена/перенос приборов учета</li>
+                    <li><i class="fas fa-lightbulb mr-2"></i> Установка осветительных приборов</li>
+                    <li><i class="fas fa-network-wired mr-2"></i> Прокладка кабельных линий</li>
+                </ul>
+            </div>
+
+            <!-- Правая колонка (изображение) -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="image-frame p-2 bg-white shadow" style="display: inline-block;">
+                    <img src="~/images/home_photo.jpg" alt="Электромонтажные работы"
+                            class="img-fluid rounded d-block" style="max-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- О Нас -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 elegant-title">О нашей компании</h2>
+            <div class="row align-items-center">
+                <!-- Блок с изображением -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="image-frame p-2 bg-white shadow">
+                        <img src="~/images/home_photo2.jpg" class="img-fluid rounded">
+                        <div class="experience-badge">
+                            <span class="years">8+</span>
+                            <span class="text">лет опыта</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Текстовый блок -->
+                <div class="col-lg-6">
+                    <div class="about-features mb-4">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Профессиональные электромонтажники с допусками</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Гарантия на все виды работ</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Современное оборудование и материалы</span>
+                        </div>
+                    </div>
+
+                    <p class="lead">
+                        Мы - команда профессиональных электриков, работающая в Иркутске более 8 лет.
+                        Специализируемся на комплексном решении задач любой сложности - от замены розетки
+                        до проектирования электроснабжения домов и коммерческих предприятий.
+                    </p>
+
+                    <p>
+                        Наш принцип - качество, безопасность и соблюдение сроков. Все работы выполняются
+                        в строгом соответствии с ПУЭ и ГОСТ. Мы используем только сертифицированные
+                        материалы от проверенных поставщиков.
+                    </p>
+
+                    <div class="mt-4">
+                        <a class="btn btn-primary btn-lg me-3" asp-page="/Home/CallbackForm">Отправить заявку</a>
+                        <a href="#reviews" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-star me-2"></i>Отзывы клиентов
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<style>
+    .elegant-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+        .elegant-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            height: 2px;
+            background: #3498db;
+        }
+
+    .about-company {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+
+    .image-frame {
+        position: relative;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+        .image-frame:hover {
+            transform: rotate(0deg);
+        }
+
+    .experience-badge {
+        position: absolute;
+        bottom: -15px;
+        right: -15px;
+        background: linear-gradient(135deg, #3498db, #2ecc71);
+        color: white;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+        .experience-badge .years {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .experience-badge .text {
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+    .about-features {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .feature-item {
+        padding: 8px 0;
+        font-size: 1.1rem;
+    }
+
+        .feature-item i {
+            margin-right: 10px;
+        }
+
+    @@media (max-width: 768px) {
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .experience-badge {
+            width: 80px;
+            height: 80px;
+            right: -10px;
+        }
+
+            .experience-badge .years {
+                font-size: 1.5rem;
+            }
+    }
+</style>

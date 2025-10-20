@@ -1,0 +1,102 @@
+﻿<div class="position-relative text-center mb-4">
+    <h1 class="display-4">Услуги</h1>
+
+    <div class="position-absolute top-50 end-0 translate-middle-y me-3">
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    title="Действия">
+                <i class="fas fa-cog"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a class="dropdown-item" asp-page="/Works/CreateWorkForm">
+                        <i class="fas fa-plus me-2"></i>Добавить услугу
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" data-bs-toggle="modal"  data-bs-target="#addCategoryWorkModal">
+                        <i class="fas fa-folder-plus me-2"></i>Добавить категорию
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteCategoryWorkModal">
+                        <i class="fas fa-trash-alt me-2"></i>Удалить категорию
+                    </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cog me-2"></i>Настройки
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно ДОБАВЛЕНИЯ КАТЕГОРИИ -->
+<div class="modal fade" id="addCategoryWorkModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Добавление новой категории услуг</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="CreateCategory" id="categoryForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Описание</label>
+                        <textarea class="form-control" name="description" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="submit" class="btn btn-primary" form="categoryForm">Создать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно УДАЛЕНИЯ КАТЕГОРИИ -->
+<div class="modal fade" id="deleteCategoryWorkModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Управление категориями услуг</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="DeleteCategory" id="deleteCategoryForm">
+                    <div class="mb-3">
+                        <label for="categorySelect" class="form-label">Выберите категорию для удаления</label>
+                        <select class="form-select" id="categorySelect" name="categoryIndex" required>
+                            @foreach (var category in Model.Categories)
+                            {
+                                <option value="@category.CategoryIndex">@category.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Внимание: При удалении категории все связанные услуги также будут удалены!
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="submit" class="btn btn-danger" form="deleteCategoryForm"
+                        onclick="return confirm('Вы уверены, что хотите удалить эту категорию и все связанные услуги?')">
+                    <i class="fas fa-trash me-1"></i>Удалить категорию
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

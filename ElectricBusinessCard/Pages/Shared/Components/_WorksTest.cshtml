@@ -1,0 +1,52 @@
+﻿@model ElectricBusinessCard.Services.EntityFramework.Models.ElectroWork
+
+<div class="dropdown">
+    <button class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            title="Действия">
+        <i class="fas fa-cog"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+            <form method="post" asp-page-handler="Edit">
+                <input type="hidden" name="workIndex" value="@Model.WorkIndex" />
+                <input type="hidden" name="categoryIndex" value="@Model.Category.CategoryIndex" />
+                <button type="submit" class="dropdown-item">
+                    <i class="fas fa-edit me-2"></i>Редактировать
+                </button>
+            </form>
+        </li>
+        <li>
+            <form method="post" asp-page-handler="Move">
+                <input type="hidden" name="workIndex" value="@Model.WorkIndex" />
+                <input type="hidden" name="categoryIndex" value="@Model.Category.CategoryIndex" />
+                <input type="hidden" name="isMoveUp" value="true" />
+                <button type="submit" class="dropdown-item">
+                    <i class="fas fa-arrow-up me-2"></i>Вверх
+                </button>
+            </form>
+        </li>
+        <li>
+            <form method="post" asp-page-handler="Move">
+                <input type="hidden" name="workIndex" value="@Model.WorkIndex" />
+                <input type="hidden" name="categoryIndex" value="@Model.Category.CategoryIndex" />
+                <input type="hidden" name="isMoveUp" value="false" />
+                <button type="submit" class="dropdown-item">
+                    <i class="fas fa-arrow-down me-2"></i>Вниз
+                </button>
+            </form>
+        </li>
+        <li>
+            <form method="post" asp-page-handler="Delete">
+                <input type="hidden" name="workIndex" value="@Model.WorkIndex" />
+                <input type="hidden" name="categoryIndex" value="@Model.Category.CategoryIndex" />
+                <button type="submit" class="dropdown-item"
+                        onclick="return confirm('Удалить эту услугу?')">
+                    <i class="fas fa-trash-alt me-2"></i>Удалить
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
