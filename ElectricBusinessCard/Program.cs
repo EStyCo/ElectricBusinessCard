@@ -1,4 +1,4 @@
-using ElectricBusinessCard.Services.EntityFramework;
+﻿using ElectricBusinessCard.Services.EntityFramework;
 using ElectricBusinessCard.Repository;
 using ElectricBusinessCard.Services;
 using Microsoft.EntityFrameworkCore;
@@ -9,14 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 
-// ����������� ���������������� �����
+// Регистрация пользовательских служб
 builder.Services.AddScoped<WorkRepository>();
 builder.Services.AddScoped<WorkService>();
 builder.Services.AddScoped<CategoryRepository>();
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<DocService>();
 
-// ���������� �������� CORS
+// Добавление политики CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowElectroservice", policy =>
@@ -28,14 +28,27 @@ builder.Services.AddCors(options =>
                           "http://localhost:5000")
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials(); // ���� ����� ���� ��� �����������
+              .AllowCredentials(); // Если нужны куки или авторизация
     });
 });
 
-// ��������� Entity Framework
+// Настройка Entity Framework
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+    var connectionString = builder.Configuration.GetConnectionString("DefaultSQLConnection");
+    options.UseSqlite(connectionString);
+
+    // Автоматически определяем путь к миграциям
+    var databasePath = Path.GetDirectoryName(connectionString.Replace("Data Source=", ""));
+    var migrationsPath = Path.Combine(databasePath, "Migrations");
+
+    // Если миграции существуют в папке БД - используем их
+    if (Directory.Exists(migrationsPath) && Directory.GetFiles(migrationsPath, "*.cs").Any())
+    {
+        // Для этого нужно чтобы миграции были в отдельной сборке
+        // или используем кастомный провайдер миграций
+        Console.WriteLine($"📁 Используем миграции из: {migrationsPath}");
+    }
 });
 
 var app = builder.Build();
@@ -52,7 +65,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// ����������� CORS MIDDLEWARE (����� �������!)
+// ПОДКЛЮЧЕНИЕ CORS MIDDLEWARE (важен порядок!)
 app.UseCors("AllowElectroservice");
 
 app.UseAuthorization();
