@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElectricBusinessCard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd74b7b5b0ac640bd624cfb3d2f9c04961f98054")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a15c9bca5cae7d8035714b1b5bd48b1c3d82982f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElectricBusinessCard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElectricBusinessCard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

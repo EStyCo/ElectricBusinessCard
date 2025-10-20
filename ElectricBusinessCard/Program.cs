@@ -1,10 +1,7 @@
-﻿using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+﻿using ElectricBusinessCard.Services.EntityFramework;
 using ElectricBusinessCard.Repository;
 using ElectricBusinessCard.Services;
-using ElectricBusinessCard.Services.EntityFramework;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
-using System.Globalization;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,14 +37,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.Configure<RequestLocalizationOptions>(options =>
-{
-    var supportedCultures = new[] { new CultureInfo("ru-RU") };
-    options.DefaultRequestCulture = new RequestCulture("ru-RU");
-    options.SupportedCultures = supportedCultures;
-    options.SupportedUICultures = supportedCultures;
-});
-
 // Настройка Entity Framework
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -67,8 +56,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     }
 });
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -77,13 +64,6 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
     app.UseHsts();
 }
-
-app.Use(async (context, next) =>
-{
-    context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
-    context.Response.Headers["Content-Language"] = "ru-RU";
-    await next();
-});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

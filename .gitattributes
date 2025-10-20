@@ -1,6 +1,0 @@
-# .gitattributes
-*.cs        text charset=utf-8
-*.cshtml    text charset=utf-8
-*.razor     text charset=utf-8
-*.json      text charset=utf-8
-*.xml       text charset=utf-8
