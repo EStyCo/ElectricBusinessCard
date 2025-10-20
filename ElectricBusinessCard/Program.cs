@@ -5,8 +5,13 @@ using ElectricBusinessCard.Services.EntityFramework;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+Console.OutputEncoding = Encoding.UTF8;
+Encoding.GetEncoding("utf-8");
 
 // Add services to the container.
 builder.Services.AddRazorPages();
