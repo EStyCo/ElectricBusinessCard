@@ -55,7 +55,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ElectricBusinessCard",
+              "Title": "ElectricBusinessCard.csproj",
               "DocumentMoniker": "C:\\GitHub\\ElectricBusinessCard\\ElectricBusinessCard\\ElectricBusinessCard.csproj",
               "RelativeDocumentMoniker": "ElectricBusinessCard\\ElectricBusinessCard.csproj",
               "ToolTip": "C:\\GitHub\\ElectricBusinessCard\\ElectricBusinessCard\\ElectricBusinessCard.csproj",
@@ -75,8 +75,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\Pages\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T18:58:36.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T18:58:36.642Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T18:37:12.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T18:37:12.053Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\Pages\\Shared\\Components\\_WorksHeader.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T15:36:24.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T15:36:24.055Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\Pages\\Works\\Works.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-20T15:12:01.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T15:12:01.208Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-20T15:19:27.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T15:19:27.798Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAowCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-20T15:16:45.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T15:16:45.835Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "ElectricBusinessCard\\Pages\\Works\\Works.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T15:13:10.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T15:13:10.235Z"
             }
           ]
         }
